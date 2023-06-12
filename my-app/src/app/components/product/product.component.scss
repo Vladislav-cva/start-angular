@@ -1,0 +1,33 @@
+.product-wrapper {
+    width: 500px;
+    margin-bottom: 15px;
+    padding: 3px;
+    border: 1px solid black;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+.product-image {
+    width: 50px;
+    margin-right: 15px;
+}
+
+.product-title {
+    font-size: unset;
+}
+
+.show-details {
+    width: 30%;
+    height: 30px;
+    border: none;
+     
+   &.yellow {
+        background-color: rgb(246, 246, 156);
+    }
+
+   &.blue {
+        background-color: rgb(185, 185, 233);
+    }
+}

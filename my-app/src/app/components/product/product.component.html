@@ -1,0 +1,25 @@
+<div class="product-wrapper">
+  <img [src]="product.image" [alt]="product.title" class="product-image" />
+  <h2 class="product-title">{{ product.title }}</h2>
+  <p>
+    Price: <span>{{ product.price | currency }}</span>
+  </p>
+
+  <button
+    class="show-details"
+    [ngClass]="{
+      yellow: !details,
+      blue: details
+    }"
+    (click)="details = !details"
+  >
+    {{ !details ? "Show" : "Hide" }} details
+  </button>
+
+  <div *ngIf="details">
+    <p>
+      {{ product.description }}
+    </p>
+    <p>Rate: {{ product.rating.rate | number : "1.2-4" }}</p>
+  </div>
+</div>

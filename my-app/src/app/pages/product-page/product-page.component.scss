@@ -1,0 +1,45 @@
+.app-wrapper {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+}
+
+.angular-head {
+    color: red;
+    text-align: center;
+}
+
+.add-product-button {
+
+}
+
+.product-filter {
+    width: 250px;
+    height: 20px;
+    border: 2px solid #6ddbff;
+    border-radius: 7px;
+    margin-bottom: 16px;
+
+    &:focus-visible {
+        outline: #0c9dcd;
+        box-shadow: 0px 0px 10px 0px rgba(147, 224, 255, 1);
+    }
+}
+
+.app-global-error {
+    width: 100%;
+}
+
+.modal-wrapper {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    background-color: rgba(131, 123, 123, 0.862);
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}

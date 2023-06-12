@@ -1,0 +1,5 @@
+<div class="global-error-wrapper" *ngIf="errorService.error$ | async as error">
+  {{ errorService.error$ | async }}
+
+  <button class="hide-error" (click)="errorService.clear()">X</button>
+</div>

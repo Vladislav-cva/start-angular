@@ -1,0 +1,24 @@
+.create-product {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+}
+
+.min-length-error {
+    color: red;
+}
+
+.product-name-field {
+    width: 250px;
+    height: 20px;
+    border: 2px solid #6ddbff;
+    border-radius: 7px;
+    margin-bottom: 16px;
+
+    &:focus-visible {
+        outline: #0c9dcd;
+        box-shadow: 0px 0px 10px 0px rgba(147, 224, 255, 1);
+    }
+}

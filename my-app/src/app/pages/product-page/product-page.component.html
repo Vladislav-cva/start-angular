@@ -1,0 +1,42 @@
+<div class="app-wrapper">
+  <h1 class="angular-head">{{ title | titlecase }}</h1>
+  <button (click)="modalService.open()" class="add-product-button">
+    Add product
+  </button>
+  <div>
+    <input type="text" class="product-filter" [(ngModel)]="filter" />
+  </div>
+
+  <!-- <app-product [product]="product[0]"></app-product>
+    <app-product [product]="product[1]"></app-product> -->
+  <p *ngIf="loading">Loading...</p>
+
+  <div *ngIf="productsService.products">
+    <!-- second appraoch to show data -->
+    <!-- <app-product
+        *ngFor="
+          let productData of products | filterProducts : filter;
+          let i = index
+        "
+        [product]="productData"
+      ></app-product> -->
+  </div>
+
+  <!-- First approach to show something wuth data from back -->
+  <app-product
+    *ngFor="
+      let productData of productsService.products | filterProducts : filter
+    "
+    [product]="productData"
+  ></app-product>
+
+  <!-- (click)="modalService.close()" -->
+  <app-modal
+    class="modal-wrapper"
+    *ngIf="modalService.isVisible$ | async"
+    title="Add Product"
+  >
+    <app-create-product></app-create-product>
+  </app-modal>
+  <app-global-error class="app-global-error"></app-global-error>
+</div>
